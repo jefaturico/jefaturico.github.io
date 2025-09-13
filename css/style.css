@@ -1,11 +1,8 @@
-/* BLUE: 0F1829 */
-html {
-	overflow-y: scroll;
-}
+html {overflow-y: scroll;}
 
 body {
 	font-family: "Lato",sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	margin: 0;
 	padding: 0;
 }
@@ -20,22 +17,12 @@ body {
 	margin: 0;
 	padding: 0em 1.5em 0em 1.5em;
 
-	ul {
-		padding: 0;
-
-		li {
-			display: inline;
-
-			a {
-				color: #fff;
-				text-decoration: none;
-				margin: 1em;
-			}
-				
+	ul {padding: 0;
+		li {display: inline;
+			a {color: #FFF;text-decoration: none;margin: 1em;}
+			a:hover {color: #FF1000;}
 		}
 	}
-
-
 }
 
 .navButton {
@@ -44,7 +31,7 @@ body {
 		flex-flow: row nowrap;
 		background-color: #FF2000;
 		text-align: center;
-		border-radius: 0.25vw;
+		border-radius: 0.25em;
 		gap: 1em;
 		padding: 0.25em 0.5em 0.25em 0.5em;
 		justify-content: center;
@@ -53,43 +40,97 @@ body {
 		text-decoration: none;
 		font-size: 20px;
 		margin: 0;
-
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.navButton:hover {
-	background-color: #D11C00;
-}
+.navButton:hover {background-color: #D11C00;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);}
 
 .main { 
 	padding: 0;
 	margin: 0;
+	min-height: 1vh;
 
 	.hero {
 		display: flex;
-		flex-flow: column nowrap;
 		background-image: url("../img/heroSection.jpg");
 		background-size: cover;
 		background-position: center;
 		color: #FFF;
-		padding: 3em 3em 3em 3em;
-		height: 50vh;
-		justify-content: space-evenly;
-	h1{
-		max-width: 40%;
-		font-size: 52px;
-		margin: 0;
-		padding: 0;
+		padding: 2em 0em 2em 10em; 
+		height: 20em;
+		align-items: center;
+
+		.block {
+			display: flex;
+			flex-flow: column nowrap;
+			max-width: 20em;
+			gap: 0.5em;
+		}
 	}
 
-	b {
-		color: #FF2000;
+	b {color: #FF2000;}
+
+	h1{font-size: 52px;margin: 0;padding: 0;}
+
+	h2{font-size: 40px;color: #FF1000;margin: 0;padding: 0;}
+
+	p {font-size: 24px;margin: 0;}
+
+	.blockTextImage {
+		display: flex;
+		flex-flow: row nowrap;
+		color: #000;
+		height: 20em;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+
+		.block {
+			display: flex;
+			flex-flow: column nowrap;
+			max-width: 20em;
+			padding: 0 10vw 0 10vw;
+			gap: 0.5em;
+		}
 	}
 
-	p { 
-		font-size: 24px;
-		max-width: 30%;
-		margin: 0em 0em 0.5em 0em;
+	.banner {
+		display: flex;
+		flex-flow: column nowrap;
+		background-image: url("../img/toolRack.jpg");
+		background-size: cover;
+		background-position: center;
+		color: #FFF;
+		padding: 2em 2em 2em 2em; 
+		height: auto;
+		align-items: center;
+		justify-content: center;
+
+		h1 {text-align: center;}
 	}
 
 }
 
+.footer {
+	display: flex;
+	background: #000;
+	height: auto;
+	margin: 0;
+	align-items: center;
+	color: #fff;
+	gap: 3em;
+	justify-content: space-evenly;
+	padding: 1em;
+
+	ul {list-style-type: none; padding:0;}
+
+	li {padding: 0.25em 0em 0.25em 0em;}
+	
+	h1 {font-size: 32px; margin:0;}
+
+	a { color: #fff; text-decoration: none; ;}
+
+	a:hover {color:#FF1000}
+
+	.logoInfo {display: flex; flex-flow: column nowrap; align-items: center;}
+}
